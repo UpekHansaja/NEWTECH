@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Manage Users | NEWTECH</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" href="res/logo.png">
+
+</head>
+
+<body style="scroll-behavior: smooth; background-color: #dddddd;">
+
+    <div id="preLoader"></div>
+
+    <div class="cursor"></div>
+    <div class="cursorIn"></div>
+
+    <div class="container-fluid">
+
+        <div class="row mt-1 mb-4">
+
+            <div class="col-md-1 col-12 mt-3 mb-3">
+
+                <button class="btn btn-dark float-end float-md-start" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+                    <i class="bi bi-three-dots mt-2 fs-2 text-white"></i>
+                </button>
+
+                <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel" style="cursor: default; background-color: #0A3B61;">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title text-white mt-3" id="offcanvasWithBothOptionsLabel">&nbsp;&nbsp;<i class="bi bi-menu-button-wide-fill fs-5"></i>&nbsp;&nbsp;ADDMIN PANEL</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body text-white rounded rounded-3">
+                        <div class="row mt-0 bg-white">
+                            <div class="col-4">
+                                <img src="res/NT logo.png" class="mt-1 mb-1" style="height: 80px;">
+                            </div>
+                            <div class="col-8 text-center">
+                                <p class="fs-4 text-dark mt-4 mt-lg-3 mb-1">Hey Admin,</p>
+                            </div>
+                        </div>
+
+                        <div class="row mt-4 mb-5">
+
+                            <div class="col-12">
+                                <button class="btn btn-outline-warning fs-4 col-12 mt-5 mb-3" onclick="window.location='adminpanel.html'">Control Panel</button>
+                            </div>
+
+                            <div class="col-12">
+                                <button class="btn btn-warning fs-4 col-12 mt-4 mb-3" onclick="window.location='manageusers.html'">Manage Users</button>
+                            </div>
+
+                            <div class="col-12">
+                                <button class="btn btn-outline-warning fs-4 col-12 mt-4 mb-3" onclick="window.location='manageproducts.html'">Manage Products</button>
+                            </div>
+
+                            <div class="col-12">
+                                <button class="btn btn-outline-warning fs-4 col-12 mt-4 mb-3" onclick="window.location='#'">Inquiries & Feed-backs</button>
+                            </div>
+
+                        </div>
+
+                        <div class="col-12 mt-3 mb-2">
+                            <button class="btn btn-danger fs-4 col-12 mt-4 mb-3" onclick="window.location='adminSignIn.html'"><i class="bi bi-box-arrow-left fs-4"></i>&nbsp;&nbsp;Log-Out</button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-10 mb-5">
+                <div class="row mt-4">
+                    <div class="col-12 mt-3 mb-3">
+                        <div class="row">
+                            <div class="col-12 mt-3 mb-3">
+                                <h1 class="col-12">Manage Users</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 mb-2">
+                        <hr class="col-12 border border-dark">
+                    </div>
+                </div>
+
+                <div class="row mt-5 mb-5 align-items-center">
+
+                    <div class="col-12 mx-4 mx-lg-0 col-lg-3">
+                        <div class="card align-items-center rounded-4" style="max-width: 20rem;">
+                            <p class="fs-4 mt-3 mb-3"><i class="bi bi-trophy-fill fs-4 text-warning"></i>&nbsp;Most Rated Seller</p>
+                            <img src="res/new_user.svg" class="card-img-top mt-1 mb-4" style="max-width: 80%;">
+                            <div class="card-body">
+                                <span class="card-text">Upek Hansaja</span><br>
+                                <span class="card-text">upek@gmail.com</span><br>
+                                <span class="card-text">0781046959</span><br>
+                                <span class="card-text text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>&nbsp;841+</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 mx-4 mx-lg-0 col-lg-3">
+                        <div class="card align-items-center rounded-4" style="max-width: 20rem;">
+                            <p class="fs-4 mt-3 mb-3"><i class="bi bi-trophy-fill fs-4 text-warning"></i>&nbsp;Most Rated Seller</p>
+                            <img src="res/new_user.svg" class="card-img-top mt-1 mb-4" style="max-width: 80%;">
+                            <div class="card-body">
+                                <span class="card-text">Upek Hansaja</span><br>
+                                <span class="card-text">upek@gmail.com</span><br>
+                                <span class="card-text">0781046959</span><br>
+                                <span class="card-text text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>&nbsp;650+</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 mx-4 mx-lg-0 col-lg-3">
+                        <div class="card align-items-center rounded-4" style="max-width: 20rem;">
+                            <p class="fs-4 mt-3 mb-3"><i class="bi bi-trophy-fill fs-4 text-warning"></i>&nbsp;Most Rated Seller</p>
+                            <img src="res/new_user.svg" class="card-img-top mt-1 mb-4" style="max-width: 80%;">
+                            <div class="card-body">
+                                <span class="card-text">Upek Hansaja</span><br>
+                                <span class="card-text">upek@gmail.com</span><br>
+                                <span class="card-text">0781046959</span><br>
+                                <span class="card-text text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>&nbsp;646+</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 mx-4 mx-lg-0 col-lg-3">
+                        <div class="card align-items-center rounded-4" style="max-width: 20rem;">
+                            <p class="fs-4 mt-3 mb-3"><i class="bi bi-trophy-fill fs-4 text-warning"></i>&nbsp;Most Rated Seller</p>
+                            <img src="res/new_user.svg" class="card-img-top mt-1 mb-4" style="max-width: 80%;">
+                            <div class="card-body">
+                                <span class="card-text">Upek Hansaja</span><br>
+                                <span class="card-text">upek@gmail.com</span><br>
+                                <span class="card-text">0781046959</span><br>
+                                <span class="card-text text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i>&nbsp;565+</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row mt-5 mb-5 align-items-center">
+
+                    <div class="col-md-6 mb-3 mt-2 col-12">
+                        <div class="col-12">
+                            <div class="card cartCards">
+                                <div class="row g-2">
+                                    <div class="col-12 col-lg-4" style="max-height: 250px;">
+                                        <img src="res/new_user.svg" class="img-fluid rounded" style="height: 100%; object-fit: cover;">
+                                    </div>
+                                    <div class="col-12 col-lg-8">
+                                        <div class="row mx-2">
+
+                                            <div class="col-12 mb-1">
+                                                <div class="card-body">
+                                                    <span class="card-title fs-5">Upek Hansaja</span><br>
+                                                    <span class="card-subtitle">Email : upek@gmail.com</span><br>
+                                                    <span class="card-subtitle">Mobile : 0781046586</span><br>
+                                                    <span class="card-subtitle">Seller Since : 2022-01-25</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="row mb-2 gap-2">
+                                                    <button class="col-5 fs-6 btn btn-dark d-grid">Update</button>
+                                                    <button class="col-5 fs-6 btn btn-outline-danger d-grid">Remove</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-3 mt-2 col-12">
+                        <div class="col-12">
+                            <div class="card cartCards">
+                                <div class="row g-2">
+                                    <div class="col-12 col-lg-4" style="max-height: 250px;">
+                                        <img src="res/new_user.svg" class="img-fluid rounded" style="height: 100%; object-fit: cover;">
+                                    </div>
+                                    <div class="col-12 col-lg-8">
+                                        <div class="row mx-2">
+
+                                            <div class="col-12 mb-1">
+                                                <div class="card-body">
+                                                    <span class="card-title fs-5">Upek Hansaja</span><br>
+                                                    <span class="card-subtitle">Email : upek@gmail.com</span><br>
+                                                    <span class="card-subtitle">Mobile : 0781046586</span><br>
+                                                    <span class="card-subtitle">Seller Since : 2022-01-25</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="row mb-2 gap-2">
+                                                    <button class="col-5 fs-6 btn btn-dark d-grid">Update</button>
+                                                    <button class="col-5 fs-6 btn btn-outline-danger d-grid">Remove</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 mb-3 mt-2 col-12">
+                        <div class="col-12">
+                            <div class="card cartCards">
+                                <div class="row g-2">
+                                    <div class="col-12 col-lg-4" style="max-height: 250px;">
+                                        <img src="res/new_user.svg" class="img-fluid rounded" style="height: 100%; object-fit: cover;">
+                                    </div>
+                                    <div class="col-12 col-lg-8">
+                                        <div class="row mx-2">
+
+                                            <div class="col-12 mb-1">
+                                                <div class="card-body">
+                                                    <span class="card-title fs-5">Upek Hansaja</span><br>
+                                                    <span class="card-subtitle">Email : upek@gmail.com</span><br>
+                                                    <span class="card-subtitle">Mobile : 0781046586</span><br>
+                                                    <span class="card-subtitle">Seller Since : 2022-01-25</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="row mb-2 gap-2">
+                                                    <button class="col-5 fs-6 btn btn-dark d-grid">Update</button>
+                                                    <button class="col-5 fs-6 btn btn-outline-danger d-grid">Remove</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-3 mt-2 col-12">
+                        <div class="col-12">
+                            <div class="card cartCards">
+                                <div class="row g-2">
+                                    <div class="col-12 col-lg-4" style="max-height: 250px;">
+                                        <img src="res/new_user.svg" class="img-fluid rounded" style="height: 100%; object-fit: cover;">
+                                    </div>
+                                    <div class="col-12 col-lg-8">
+                                        <div class="row mx-2">
+
+                                            <div class="col-12 mb-1">
+                                                <div class="card-body">
+                                                    <span class="card-title fs-5">Upek Hansaja</span><br>
+                                                    <span class="card-subtitle">Email : upek@gmail.com</span><br>
+                                                    <span class="card-subtitle">Mobile : 0781046586</span><br>
+                                                    <span class="card-subtitle">Seller Since : 2022-01-25</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="row mb-2 gap-2">
+                                                    <button class="col-5 fs-6 btn btn-dark d-grid">Update</button>
+                                                    <button class="col-5 fs-6 btn btn-outline-danger d-grid">Remove</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-3 mt-2 col-12">
+                        <div class="col-12">
+                            <div class="card cartCards">
+                                <div class="row g-2">
+                                    <div class="col-12 col-lg-4" style="max-height: 250px;">
+                                        <img src="res/new_user.svg" class="img-fluid rounded" style="height: 100%; object-fit: cover;">
+                                    </div>
+                                    <div class="col-12 col-lg-8">
+                                        <div class="row mx-2">
+
+                                            <div class="col-12 mb-1">
+                                                <div class="card-body">
+                                                    <span class="card-title fs-5">Upek Hansaja</span><br>
+                                                    <span class="card-subtitle">Email : upek@gmail.com</span><br>
+                                                    <span class="card-subtitle">Mobile : 0781046586</span><br>
+                                                    <span class="card-subtitle">Seller Since : 2022-01-25</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="row mb-2 gap-2">
+                                                    <button class="col-5 fs-6 btn btn-dark d-grid">Update</button>
+                                                    <button class="col-5 fs-6 btn btn-outline-danger d-grid">Remove</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-3 mt-2 col-12">
+                        <div class="col-12">
+                            <div class="card cartCards">
+                                <div class="row g-2">
+                                    <div class="col-12 col-lg-4" style="max-height: 250px;">
+                                        <img src="res/new_user.svg" class="img-fluid rounded" style="height: 100%; object-fit: cover;">
+                                    </div>
+                                    <div class="col-12 col-lg-8">
+                                        <div class="row mx-2">
+
+                                            <div class="col-12 mb-1">
+                                                <div class="card-body">
+                                                    <span class="card-title fs-5">Upek Hansaja</span><br>
+                                                    <span class="card-subtitle">Email : upek@gmail.com</span><br>
+                                                    <span class="card-subtitle">Mobile : 0781046586</span><br>
+                                                    <span class="card-subtitle">Seller Since : 2022-01-25</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="row mb-2 gap-2">
+                                                    <button class="col-5 fs-6 btn btn-dark d-grid">Update</button>
+                                                    <button class="col-5 fs-6 btn btn-outline-danger d-grid">Remove</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-3 mt-2 col-12">
+                        <div class="col-12">
+                            <div class="card cartCards">
+                                <div class="row g-2">
+                                    <div class="col-12 col-lg-4" style="max-height: 250px;">
+                                        <img src="res/new_user.svg" class="img-fluid rounded" style="height: 100%; object-fit: cover;">
+                                    </div>
+                                    <div class="col-12 col-lg-8">
+                                        <div class="row mx-2">
+
+                                            <div class="col-12 mb-1">
+                                                <div class="card-body">
+                                                    <span class="card-title fs-5">Upek Hansaja</span><br>
+                                                    <span class="card-subtitle">Email : upek@gmail.com</span><br>
+                                                    <span class="card-subtitle">Mobile : 0781046586</span><br>
+                                                    <span class="card-subtitle">Seller Since : 2022-01-25</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="row mb-2 gap-2">
+                                                    <button class="col-5 fs-6 btn btn-dark d-grid">Update</button>
+                                                    <button class="col-5 fs-6 btn btn-outline-danger d-grid">Remove</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-3 mt-2 col-12">
+                        <div class="col-12">
+                            <div class="card cartCards">
+                                <div class="row g-2">
+                                    <div class="col-12 col-lg-4" style="max-height: 250px;">
+                                        <img src="res/new_user.svg" class="img-fluid rounded" style="height: 100%; object-fit: cover;">
+                                    </div>
+                                    <div class="col-12 col-lg-8">
+                                        <div class="row mx-2">
+
+                                            <div class="col-12 mb-1">
+                                                <div class="card-body">
+                                                    <span class="card-title fs-5">Upek Hansaja</span><br>
+                                                    <span class="card-subtitle">Email : upek@gmail.com</span><br>
+                                                    <span class="card-subtitle">Mobile : 0781046586</span><br>
+                                                    <span class="card-subtitle">Seller Since : 2022-01-25</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="row mb-2 gap-2">
+                                                    <button class="col-5 fs-6 btn btn-dark d-grid">Update</button>
+                                                    <button class="col-5 fs-6 btn btn-outline-danger d-grid">Remove</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-3 mt-2 col-12">
+                        <div class="col-12">
+                            <div class="card cartCards">
+                                <div class="row g-2">
+                                    <div class="col-12 col-lg-4" style="max-height: 250px;">
+                                        <img src="res/new_user.svg" class="img-fluid rounded" style="height: 100%; object-fit: cover;">
+                                    </div>
+                                    <div class="col-12 col-lg-8">
+                                        <div class="row mx-2">
+
+                                            <div class="col-12 mb-1">
+                                                <div class="card-body">
+                                                    <span class="card-title fs-5">Upek Hansaja</span><br>
+                                                    <span class="card-subtitle">Email : upek@gmail.com</span><br>
+                                                    <span class="card-subtitle">Mobile : 0781046586</span><br>
+                                                    <span class="card-subtitle">Seller Since : 2022-01-25</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="row mb-2 gap-2">
+                                                    <button class="col-5 fs-6 btn btn-dark d-grid">Update</button>
+                                                    <button class="col-5 fs-6 btn btn-outline-danger d-grid">Remove</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-3 mt-2 col-12">
+                        <div class="col-12">
+                            <div class="card cartCards">
+                                <div class="row g-2">
+                                    <div class="col-12 col-lg-4" style="max-height: 250px;">
+                                        <img src="res/new_user.svg" class="img-fluid rounded" style="height: 100%; object-fit: cover;">
+                                    </div>
+                                    <div class="col-12 col-lg-8">
+                                        <div class="row mx-2">
+
+                                            <div class="col-12 mb-1">
+                                                <div class="card-body">
+                                                    <span class="card-title fs-5">Upek Hansaja</span><br>
+                                                    <span class="card-subtitle">Email : upek@gmail.com</span><br>
+                                                    <span class="card-subtitle">Mobile : 0781046586</span><br>
+                                                    <span class="card-subtitle">Seller Since : 2022-01-25</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="row mb-2 gap-2">
+                                                    <button class="col-5 fs-6 btn btn-dark d-grid">Update</button>
+                                                    <button class="col-5 fs-6 btn btn-outline-danger d-grid">Remove</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-3 mt-2 col-12">
+                        <div class="col-12">
+                            <div class="card cartCards">
+                                <div class="row g-2">
+                                    <div class="col-12 col-lg-4" style="max-height: 250px;">
+                                        <img src="res/new_user.svg" class="img-fluid rounded" style="height: 100%; object-fit: cover;">
+                                    </div>
+                                    <div class="col-12 col-lg-8">
+                                        <div class="row mx-2">
+
+                                            <div class="col-12 mb-1">
+                                                <div class="card-body">
+                                                    <span class="card-title fs-5">Upek Hansaja</span><br>
+                                                    <span class="card-subtitle">Email : upek@gmail.com</span><br>
+                                                    <span class="card-subtitle">Mobile : 0781046586</span><br>
+                                                    <span class="card-subtitle">Seller Since : 2022-01-25</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="row mb-2 gap-2">
+                                                    <button class="col-5 fs-6 btn btn-dark d-grid">Update</button>
+                                                    <button class="col-5 fs-6 btn btn-outline-danger d-grid">Remove</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3 mt-2 col-12">
+                        <div class="col-12">
+                            <div class="card cartCards">
+                                <div class="row g-2">
+                                    <div class="col-12 col-lg-4" style="max-height: 250px;">
+                                        <img src="res/new_user.svg" class="img-fluid rounded" style="height: 100%; object-fit: cover;">
+                                    </div>
+                                    <div class="col-12 col-lg-8">
+                                        <div class="row mx-2">
+
+                                            <div class="col-12 mb-1">
+                                                <div class="card-body">
+                                                    <span class="card-title fs-5">Upek Hansaja</span><br>
+                                                    <span class="card-subtitle">Email : upek@gmail.com</span><br>
+                                                    <span class="card-subtitle">Mobile : 0781046586</span><br>
+                                                    <span class="card-subtitle">Seller Since : 2022-01-25</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="row mb-2 gap-2">
+                                                    <button class="col-5 fs-6 btn btn-dark d-grid">Update</button>
+                                                    <button class="col-5 fs-6 btn btn-outline-danger d-grid">Remove</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-3 mt-2 col-12">
+                        <div class="col-12">
+                            <div class="card cartCards">
+                                <div class="row g-2">
+                                    <div class="col-12 col-lg-4" style="max-height: 250px;">
+                                        <img src="res/new_user.svg" class="img-fluid rounded" style="height: 100%; object-fit: cover;">
+                                    </div>
+                                    <div class="col-12 col-lg-8">
+                                        <div class="row mx-2">
+
+                                            <div class="col-12 mb-1">
+                                                <div class="card-body">
+                                                    <span class="card-title fs-5">Upek Hansaja</span><br>
+                                                    <span class="card-subtitle">Email : upek@gmail.com</span><br>
+                                                    <span class="card-subtitle">Mobile : 0781046586</span><br>
+                                                    <span class="card-subtitle">Seller Since : 2022-01-25</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="row mb-2 gap-2">
+                                                    <button class="col-5 fs-6 btn btn-dark d-grid">Update</button>
+                                                    <button class="col-5 fs-6 btn btn-outline-danger d-grid">Remove</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-3 mt-2 col-12">
+                        <div class="col-12">
+                            <div class="card cartCards">
+                                <div class="row g-2">
+                                    <div class="col-12 col-lg-4" style="max-height: 250px;">
+                                        <img src="res/new_user.svg" class="img-fluid rounded" style="height: 100%; object-fit: cover;">
+                                    </div>
+                                    <div class="col-12 col-lg-8">
+                                        <div class="row mx-2">
+
+                                            <div class="col-12 mb-1">
+                                                <div class="card-body">
+                                                    <span class="card-title fs-5">Upek Hansaja</span><br>
+                                                    <span class="card-subtitle">Email : upek@gmail.com</span><br>
+                                                    <span class="card-subtitle">Mobile : 0781046586</span><br>
+                                                    <span class="card-subtitle">Seller Since : 2022-01-25</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="row mb-2 gap-2">
+                                                    <button class="col-5 fs-6 btn btn-dark d-grid">Update</button>
+                                                    <button class="col-5 fs-6 btn btn-outline-danger d-grid">Remove</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-3 mt-2 col-12">
+                        <div class="col-12">
+                            <div class="card cartCards">
+                                <div class="row g-2">
+                                    <div class="col-12 col-lg-4" style="max-height: 250px;">
+                                        <img src="res/new_user.svg" class="img-fluid rounded" style="height: 100%; object-fit: cover;">
+                                    </div>
+                                    <div class="col-12 col-lg-8">
+                                        <div class="row mx-2">
+
+                                            <div class="col-12 mb-1">
+                                                <div class="card-body">
+                                                    <span class="card-title fs-5">Upek Hansaja</span><br>
+                                                    <span class="card-subtitle">Email : upek@gmail.com</span><br>
+                                                    <span class="card-subtitle">Mobile : 0781046586</span><br>
+                                                    <span class="card-subtitle">Seller Since : 2022-01-25</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="row mb-2 gap-2">
+                                                    <button class="col-5 fs-6 btn btn-dark d-grid">Update</button>
+                                                    <button class="col-5 fs-6 btn btn-outline-danger d-grid">Remove</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-3 mt-2 col-12">
+                        <div class="col-12">
+                            <div class="card cartCards">
+                                <div class="row g-2">
+                                    <div class="col-12 col-lg-4" style="max-height: 250px;">
+                                        <img src="res/new_user.svg" class="img-fluid rounded" style="height: 100%; object-fit: cover;">
+                                    </div>
+                                    <div class="col-12 col-lg-8">
+                                        <div class="row mx-2">
+
+                                            <div class="col-12 mb-1">
+                                                <div class="card-body">
+                                                    <span class="card-title fs-5">Upek Hansaja</span><br>
+                                                    <span class="card-subtitle">Email : upek@gmail.com</span><br>
+                                                    <span class="card-subtitle">Mobile : 0781046586</span><br>
+                                                    <span class="card-subtitle">Seller Since : 2022-01-25</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="row mb-2 gap-2">
+                                                    <button class="col-5 fs-6 btn btn-dark d-grid">Update</button>
+                                                    <button class="col-5 fs-6 btn btn-outline-danger d-grid">Remove</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-3 mt-2 col-12">
+                        <div class="col-12">
+                            <div class="card cartCards">
+                                <div class="row g-2">
+                                    <div class="col-12 col-lg-4" style="max-height: 250px;">
+                                        <img src="res/new_user.svg" class="img-fluid rounded" style="height: 100%; object-fit: cover;">
+                                    </div>
+                                    <div class="col-12 col-lg-8">
+                                        <div class="row mx-2">
+
+                                            <div class="col-12 mb-1">
+                                                <div class="card-body">
+                                                    <span class="card-title fs-5">Upek Hansaja</span><br>
+                                                    <span class="card-subtitle">Email : upek@gmail.com</span><br>
+                                                    <span class="card-subtitle">Mobile : 0781046586</span><br>
+                                                    <span class="card-subtitle">Seller Since : 2022-01-25</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="row mb-2 gap-2">
+                                                    <button class="col-5 fs-6 btn btn-dark d-grid">Update</button>
+                                                    <button class="col-5 fs-6 btn btn-outline-danger d-grid">Remove</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-3 mt-2 col-12">
+                        <div class="col-12">
+                            <div class="card cartCards">
+                                <div class="row g-2">
+                                    <div class="col-12 col-lg-4" style="max-height: 250px;">
+                                        <img src="res/new_user.svg" class="img-fluid rounded" style="height: 100%; object-fit: cover;">
+                                    </div>
+                                    <div class="col-12 col-lg-8">
+                                        <div class="row mx-2">
+
+                                            <div class="col-12 mb-1">
+                                                <div class="card-body">
+                                                    <span class="card-title fs-5">Upek Hansaja</span><br>
+                                                    <span class="card-subtitle">Email : upek@gmail.com</span><br>
+                                                    <span class="card-subtitle">Mobile : 0781046586</span><br>
+                                                    <span class="card-subtitle">Seller Since : 2022-01-25</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="row mb-2 gap-2">
+                                                    <button class="col-5 fs-6 btn btn-dark d-grid">Update</button>
+                                                    <button class="col-5 fs-6 btn btn-outline-danger d-grid">Remove</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="charts.js"></script>
+    <script src="bootstrap.bundle.js"></script>
+    <script src="imgSwipers.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

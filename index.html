@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SignIn | NEWTECH</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="res/logo.png">
+
+</head>
+
+<body class="indexHolder">
+
+    <div id="preLoader"></div>
+
+    <div class="cursor"></div>
+    <div class="cursorIn"></div>
+
+    <section class="indexHolder">
+
+        <div class="col-12">
+            <div class="row">
+
+                <div class="col-12 col-lg-6">
+                    <div class="row mx-2">
+                        <svg height="100%" width="auto" class="svg">
+                            <clipPath id="text-overlay">
+                                <text x="50%" y="50%" fill="red" text-anchor="end" class="txt">
+                                    NEWTECH
+                                </text>
+                            </clipPath>
+                        </svg>
+                        <video src="res/Ink.mp4" autoplay loop muted class="video1"></video>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-6 inputFields">
+                    <div class="row mt-lg-5 d-none" id="signUpBox">
+
+                        <div class="col-12 mt-2 mx-3 mx-lg-4">
+                            <h2 style="font-weight: bold;">Create New Account</h2>
+                        </div>
+                        <br>
+                        <div class="row mt-1 mx-3 mb-5">
+                            <div class="col-11 col-md-10 col-lg-5 mt-2 mb-2">
+                                <label class="form-label inputLabels">First Name</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-11 col-md-10 col-lg-5 mt-2 mb-2">
+                                <label class="form-label inputLabels">Last Name</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-11 col-md-10 mt-2 mb-2">
+                                <label class="form-label inputLabels">Email</label>
+                                <input type="email" class="form-control">
+                            </div>
+                            <div class="col-11 col-md-10 mt-2 mb-2">
+                                <label class="form-label inputLabels">Password</label>
+                                <input type="password" class="form-control">
+                            </div>
+                            <div class="col-11 col-md-10 col-lg-5 mt-2 mb-2">
+                                <label class="form-label inputLabels">Mobile</label>
+                                <input type="text" class="form-control" maxlength="10">
+                            </div>
+                            <div class="col-11 col-md-10 col-lg-5 mt-2 mb-2">
+                                <label class="form-label inputLabels">Gender</label>
+                                <select class="form-select">
+                                    <option hidden>Select Your Gender</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12 mt-3 mb-2">
+                                <button class="col-11 col-md-10 btn btn-primary">Join Us...</button>
+                            </div>
+                            <div class="col-12 mt-3 mb-2">
+                                <button class="col-11 col-md-10 btn btn-warning" onclick="changeView();">Already Have an
+                                    Account? SignIn</button>
+                            </div>
+                            <div class="col-12 mt-3 mb-2 mb-5">
+                                <button class="col-11 col-md-10 btn btn-dark" onclick="window.location='home.html'">SignUp Later</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row mt-lg-5" id="signInBox">
+
+                        <div class="col-12 mt-5 mx-3 mx-lg-4">
+                            <h2 style="font-weight: bold;">SignIn</h2>
+                        </div>
+                        <br>
+                        <div class="row mt-1 mx-3">
+
+                            <div class="col-11 col-md-10 mt-2 mb-2">
+                                <label class="form-label inputLabels">Email</label>
+                                <input type="email" class="form-control">
+                            </div>
+                            <div class="col-11 col-md-10 mt-2 mb-2">
+                                <label class="form-label inputLabels">Password</label>
+                                <input type="password" class="form-control">
+                            </div>
+                            <div class="col-11 col-md-10 mt-2 mb-4">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="rememberme">
+                                            <label class="form-check-label">Remember Me</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 text-end">
+                                        <a href="#" class="link-primary">Forgot Password?</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-3 mb-2">
+                                <button class="col-11 col-md-10 btn btn-primary">SignIn</button>
+                            </div>
+                            <div class="col-12 mt-3 mb-2">
+                                <button class="col-11 col-md-10 btn btn-warning" onclick="changeView();">Don't Have an
+                                    Account? Join Us</button>
+                            </div>
+                            <div class="col-12 mt-3 mb-1">
+                                <button class="col-11 col-md-10 btn btn-dark" onclick="window.location='home.html'">SignIn Later</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-12 mt-5">
+                    <div class="row">
+                        <div class="text-center" style="position: absolute;">
+                            <p>Copyright &copy; 2022 <a href="home.html" class="link-dark nav-links mt-5" style="text-decoration: none;">newtech.lk</a>&nbsp;All Right Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </section>
+
+
+
+    <script src="bootstrap.bundle.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
