@@ -23,6 +23,16 @@ style="color: #0A3A62"; */
   background: #7895AA;
 }
 
+::-moz-webkit-scrollbar-track {
+  background: #0A3B61;
+}
+
+::-moz-webkit-scrollbar-thumb {
+  background: #e7faff;
+  border-radius: 100vw;
+}
+
+
 .cursor {
   width: 2rem;
   height: 2rem;
@@ -820,4 +830,3 @@ a[data-fancybox] img {
     0px 79px 80px rgba(0, 0, 0, 0.16);
   transition: 0.3s;
 }
-
